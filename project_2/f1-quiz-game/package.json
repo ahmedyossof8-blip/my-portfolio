@@ -1,0 +1,17 @@
+{
+  "name": "f1-quiz-game",
+  "version": "2.0.0",
+  "description": "Bilingual F1 Quiz Game — English & Arabic",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["f1", "quiz", "formula1", "bilingual"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.18.2"
+  }
+}

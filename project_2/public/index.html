@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="F1 Quiz Game — Test your Formula 1 knowledge with 10 timed questions. Play in English or Arabic!" />
+  <title>🏎️ F1 Quiz Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════  PARTICLES  ═══════════════════════════ -->
+<div id="particles"></div>
+
+<!-- ═══════════════════════════  HEADER  ════════════════════════════ -->
+<header class="site-header">
+  <div class="logo">
+    <span class="logo-f1">F1</span>
+    <span class="logo-quiz" data-en="QUIZ CHALLENGE" data-ar="تحدي الأسئلة">QUIZ CHALLENGE</span>
+  </div>
+  <button id="lang-toggle" class="lang-btn" aria-label="Switch language">
+    <span id="lang-label">🌐 العربية</span>
+  </button>
+</header>
+
+<!-- ═══════════════════════════  SCREENS  ═══════════════════════════ -->
+<main class="app">
+
+  <!-- ── SCREEN 1: HOME ── -->
+  <section id="screen-home" class="screen active">
+    <div class="home-card glass">
+      <div class="f1-car-anim">🏎️</div>
+      <h1 class="home-title" data-en="Formula 1 Quiz Challenge" data-ar="تحدي أسئلة الفورمولا 1">Formula 1 Quiz Challenge</h1>
+      <p class="home-sub" data-en="10 questions · 30 seconds each · Race to the top!" data-ar="10 أسئلة · 30 ثانية لكل سؤال · تسابق نحو القمة!">10 questions · 30 seconds each · Race to the top!</p>
+
+      <div class="name-row">
+        <input id="player-name" type="text" maxlength="20" autocomplete="off"
+               placeholder="Enter your name…" data-placeholder-en="Enter your name…" data-placeholder-ar="أدخل اسمك…" />
+      </div>
+
+      <div class="home-buttons">
+        <button id="btn-start" class="btn btn-primary pulse">
+          <span data-en="🚦 Start Race" data-ar="🚦 ابدأ السباق">🚦 Start Race</span>
+        </button>
+        <button id="btn-leaderboard" class="btn btn-secondary">
+          <span data-en="🏆 Leaderboard" data-ar="🏆 المتصدرون">🏆 Leaderboard</span>
+        </button>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-num">30</span>
+          <span class="stat-label" data-en="Sec/Question" data-ar="ثانية/سؤال">Sec/Question</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">10</span>
+          <span class="stat-label" data-en="Questions" data-ar="أسئلة">Questions</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">5</span>
+          <span class="stat-label" data-en="Categories" data-ar="فئات">Categories</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SCREEN 2: QUIZ ── -->
+  <section id="screen-quiz" class="screen">
+    <div class="quiz-wrapper">
+
+      <!-- Top bar -->
+      <div class="quiz-topbar">
+        <div class="quiz-progress-wrap">
+          <span id="q-counter" class="q-counter"></span>
+          <div class="progress-bar-track">
+            <div id="progress-bar" class="progress-bar-fill"></div>
+          </div>
+        </div>
+        <div class="timer-wrap">
+          <svg class="timer-ring" viewBox="0 0 44 44">
+            <circle cx="22" cy="22" r="18" class="ring-bg"/>
+            <circle id="ring-progress" cx="22" cy="22" r="18" class="ring-fg"/>
+          </svg>
+          <span id="timer-num" class="timer-num">30</span>
+        </div>
+        <div class="score-wrap">
+          <span class="score-icon">⭐</span>
+          <span id="live-score">0</span>
+        </div>
+      </div>
+
+      <!-- Category badge -->
+      <div id="q-category" class="category-badge"></div>
+
+      <!-- Question -->
+      <div class="quiz-card glass">
+        <p id="question-text" class="question-text"></p>
+        <div id="options-grid" class="options-grid"></div>
+      </div>
+
+      <!-- Feedback -->
+      <div id="feedback-bar" class="feedback-bar hidden"></div>
+
+      <!-- Next button -->
+      <button id="btn-next" class="btn btn-primary btn-next hidden">
+        <span data-en="Next Question →" data-ar="السؤال التالي →">Next Question →</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ── SCREEN 3: RESULT ── -->
+  <section id="screen-result" class="screen">
+    <div class="result-card glass">
+      <div id="result-trophy" class="result-trophy">🏆</div>
+      <h2 id="result-title" class="result-title"></h2>
+      <div class="result-score-ring">
+        <span id="result-score-num" class="result-big-num"></span>
+        <span class="result-score-label" data-en="/ 10" data-ar="/ 10">/ 10</span>
+      </div>
+      <div class="result-stats">
+        <div class="result-stat">
+          <span class="rs-icon">⏱️</span>
+          <span id="result-time" class="rs-val"></span>
+          <span class="rs-lab" data-en="seconds" data-ar="ثانية">seconds</span>
+        </div>
+        <div class="result-stat">
+          <span class="rs-icon">🏅</span>
+          <span id="result-rank" class="rs-val"></span>
+          <span class="rs-lab" data-en="rank" data-ar="ترتيب">rank</span>
+        </div>
+        <div class="result-stat">
+          <span class="rs-icon">✅</span>
+          <span id="result-correct" class="rs-val"></span>
+          <span class="rs-lab" data-en="correct" data-ar="صحيح">correct</span>
+        </div>
+      </div>
+      <div class="result-buttons">
+        <button id="btn-replay" class="btn btn-primary">
+          <span data-en="🔄 Play Again" data-ar="🔄 العب مجدداً">🔄 Play Again</span>
+        </button>
+        <button id="btn-result-lb" class="btn btn-secondary">
+          <span data-en="🏆 Leaderboard" data-ar="🏆 المتصدرون">🏆 Leaderboard</span>
+        </button>
+        <button id="btn-home" class="btn btn-ghost">
+          <span data-en="🏠 Home" data-ar="🏠 الرئيسية">🏠 Home</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SCREEN 4: LEADERBOARD ── -->
+  <section id="screen-leaderboard" class="screen">
+    <div class="lb-wrapper glass">
+      <h2 class="lb-title" data-en="🏆 Leaderboard" data-ar="🏆 قائمة المتصدرين">🏆 Leaderboard</h2>
+      <div id="lb-list" class="lb-list"></div>
+      <button id="btn-lb-back" class="btn btn-secondary" style="margin-top:2rem">
+        <span data-en="← Back" data-ar="← رجوع">← Back</span>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════  LOADING OVERLAY  ═══════════════════════════ -->
+<div id="loading-overlay" class="loading-overlay hidden">
+  <div class="loader-car">🏎️</div>
+  <p data-en="Loading race data…" data-ar="جارٍ تحميل بيانات السباق…">Loading race data…</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

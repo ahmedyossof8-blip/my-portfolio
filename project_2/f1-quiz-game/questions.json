@@ -1,0 +1,602 @@
+[
+    {
+        "id": 1,
+        "question_en": "Which driver holds the record for the most Formula 1 World Championship titles?",
+        "question_ar": "من هو السائق الذي يحمل رقم قياسي في أكثر عدد من ألقاب بطولة العالم للفورمولا 1؟",
+        "options_en": [
+            "Michael Schumacher",
+            "Lewis Hamilton",
+            "Ayrton Senna",
+            "Max Verstappen"
+        ],
+        "options_ar": [
+            "مايكل شوماخر",
+            "لويس هاميلتون",
+            "آيرتون سينا",
+            "ماكس فيرستابن"
+        ],
+        "answer_en": "Lewis Hamilton",
+        "answer_ar": "لويس هاميلتون",
+        "category": "drivers"
+    },
+    {
+        "id": 2,
+        "question_en": "Which team is nicknamed 'The Prancing Horse'?",
+        "question_ar": "ما هو الفريق الملقب بـ 'الحصان الجامح'؟",
+        "options_en": [
+            "Mercedes",
+            "Red Bull",
+            "Ferrari",
+            "McLaren"
+        ],
+        "options_ar": [
+            "مرسيدس",
+            "ريد بول",
+            "فيراري",
+            "ماكلارين"
+        ],
+        "answer_en": "Ferrari",
+        "answer_ar": "فيراري",
+        "category": "teams"
+    },
+    {
+        "id": 3,
+        "question_en": "In what year did the Formula 1 World Championship officially begin?",
+        "question_ar": "في أي عام بدأت بطولة العالم للفورمولا 1 رسميًا؟",
+        "options_en": [
+            "1950",
+            "1960",
+            "1970",
+            "1948"
+        ],
+        "options_ar": [
+            "1950",
+            "1960",
+            "1970",
+            "1948"
+        ],
+        "answer_en": "1950",
+        "answer_ar": "1950",
+        "category": "history"
+    },
+    {
+        "id": 4,
+        "question_en": "Which team has won the most Constructors' Championships?",
+        "question_ar": "أي فريق فاز بأكبر عدد من بطولات المصنعين؟",
+        "options_en": [
+            "Ferrari",
+            "Mercedes",
+            "Williams",
+            "McLaren"
+        ],
+        "options_ar": [
+            "فيراري",
+            "مرسيدس",
+            "ويليامز",
+            "ماكلارين"
+        ],
+        "answer_en": "Ferrari",
+        "answer_ar": "فيراري",
+        "category": "teams"
+    },
+    {
+        "id": 5,
+        "question_en": "What nationality was the legendary driver Ayrton Senna?",
+        "question_ar": "ما هي جنسية السائق الأسطوري آيرتون سينا؟",
+        "options_en": [
+            "Brazilian",
+            "Argentine",
+            "Italian",
+            "French"
+        ],
+        "options_ar": [
+            "برازيلي",
+            "أرجنتيني",
+            "إيطالي",
+            "فرنسي"
+        ],
+        "answer_en": "Brazilian",
+        "answer_ar": "برازيلي",
+        "category": "drivers"
+    },
+    {
+        "id": 6,
+        "question_en": "Which country hosts the Spa-Francorchamps circuit?",
+        "question_ar": "أي دولة تستضيف حلبة سبا-فرانكورشان؟",
+        "options_en": [
+            "Belgium",
+            "France",
+            "Germany",
+            "Italy"
+        ],
+        "options_ar": [
+            "بلجيكا",
+            "فرنسا",
+            "ألمانيا",
+            "إيطاليا"
+        ],
+        "answer_en": "Belgium",
+        "answer_ar": "بلجيكا",
+        "category": "circuits"
+    },
+    {
+        "id": 7,
+        "question_en": "Who won the very first Formula 1 World Championship in 1950?",
+        "question_ar": "من فاز ببطولة العالم الأولى للفورمولا 1 عام 1950؟",
+        "options_en": [
+            "Juan Manuel Fangio",
+            "Alberto Ascari",
+            "Nino Farina",
+            "Jack Brabham"
+        ],
+        "options_ar": [
+            "خوان مانويل فانجيو",
+            "ألبرتو أسكاري",
+            "نينو فارينا",
+            "جاك برابهام"
+        ],
+        "answer_en": "Nino Farina",
+        "answer_ar": "نينو فارينا",
+        "category": "history"
+    },
+    {
+        "id": 8,
+        "question_en": "Which circuit is known as 'The Temple of Speed'?",
+        "question_ar": "أي حلبة تُعرف بـ 'معبد السرعة'؟",
+        "options_en": [
+            "Monza",
+            "Silverstone",
+            "Suzuka",
+            "Monaco"
+        ],
+        "options_ar": [
+            "مونزا",
+            "سيلفرستون",
+            "سوزوكا",
+            "موناكو"
+        ],
+        "answer_en": "Monza",
+        "answer_ar": "مونزا",
+        "category": "circuits"
+    },
+    {
+        "id": 9,
+        "question_en": "How many points does a driver earn for winning a race?",
+        "question_ar": "كم نقطة يكسب السائق عند الفوز بسباق؟",
+        "options_en": [
+            "10",
+            "25",
+            "20",
+            "15"
+        ],
+        "options_ar": [
+            "10",
+            "25",
+            "20",
+            "15"
+        ],
+        "answer_en": "25",
+        "answer_ar": "25",
+        "category": "rules"
+    },
+    {
+        "id": 10,
+        "question_en": "What is the maximum number of cars allowed per team in F1?",
+        "question_ar": "ما هو الحد الأقصى لعدد السيارات المسموح به لكل فريق في الفورمولا 1؟",
+        "options_en": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "options_ar": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ],
+        "answer_en": "2",
+        "answer_ar": "2",
+        "category": "rules"
+    },
+    {
+        "id": 11,
+        "question_en": "Which driver is known as 'The Flying Finn'?",
+        "question_ar": "أي سائق يُعرف بـ 'الفنلندي الطائر'؟",
+        "options_en": [
+            "Kimi Räikkönen",
+            "Mika Häkkinen",
+            "Valtteri Bottas",
+            "Heikki Kovalainen"
+        ],
+        "options_ar": [
+            "كيمي رايكونن",
+            "ميكا هاكينن",
+            "فالتيري بوتاس",
+            "هيكي كوفالاينن"
+        ],
+        "answer_en": "Mika Häkkinen",
+        "answer_ar": "ميكا هاكينن",
+        "category": "drivers"
+    },
+    {
+        "id": 12,
+        "question_en": "In which city is the Monaco Grand Prix held?",
+        "question_ar": "في أي مدينة يُقام جائزة موناكو الكبرى؟",
+        "options_en": [
+            "Nice",
+            "Monte Carlo",
+            "Cannes",
+            "Geneva"
+        ],
+        "options_ar": [
+            "نيس",
+            "مونتي كارلو",
+            "كان",
+            "جنيف"
+        ],
+        "answer_en": "Monte Carlo",
+        "answer_ar": "مونتي كارلو",
+        "category": "circuits"
+    },
+    {
+        "id": 13,
+        "question_en": "What color flag signals the end of a race in F1?",
+        "question_ar": "ما لون العلم الذي يُشير إلى نهاية السباق في الفورمولا 1؟",
+        "options_en": [
+            "Red",
+            "White",
+            "Chequered (Black & White)",
+            "Yellow"
+        ],
+        "options_ar": [
+            "أحمر",
+            "أبيض",
+            "المربعات (أسود وأبيض)",
+            "أصفر"
+        ],
+        "answer_en": "Chequered (Black & White)",
+        "answer_ar": "المربعات (أسود وأبيض)",
+        "category": "rules"
+    },
+    {
+        "id": 14,
+        "question_en": "Which driver won the 2021 F1 World Championship on the final lap of the last race?",
+        "question_ar": "من فاز ببطولة الفورمولا 1 لعام 2021 في الدورة الأخيرة من آخر سباق؟",
+        "options_en": [
+            "Lewis Hamilton",
+            "Max Verstappen",
+            "Valtteri Bottas",
+            "Sergio Perez"
+        ],
+        "options_ar": [
+            "لويس هاميلتون",
+            "ماكس فيرستابن",
+            "فالتيري بوتاس",
+            "سيرجيو بيريز"
+        ],
+        "answer_en": "Max Verstappen",
+        "answer_ar": "ماكس فيرستابن",
+        "category": "history"
+    },
+    {
+        "id": 15,
+        "question_en": "What does DRS stand for in Formula 1?",
+        "question_ar": "ماذا تعني اختصار DRS في الفورمولا 1؟",
+        "options_en": [
+            "Drag Reduction System",
+            "Dynamic Race Speed",
+            "Driver Response System",
+            "Direct Racing Speed"
+        ],
+        "options_ar": [
+            "نظام تقليل السحب الهوائي",
+            "سرعة السباق الديناميكية",
+            "نظام استجابة السائق",
+            "سرعة السباق المباشرة"
+        ],
+        "answer_en": "Drag Reduction System",
+        "answer_ar": "نظام تقليل السحب الهوائي",
+        "category": "rules"
+    },
+    {
+        "id": 16,
+        "question_en": "Which country is home to the Suzuka Circuit?",
+        "question_ar": "أي دولة تحتضن حلبة سوزوكا؟",
+        "options_en": [
+            "South Korea",
+            "China",
+            "Japan",
+            "Malaysia"
+        ],
+        "options_ar": [
+            "كوريا الجنوبية",
+            "الصين",
+            "اليابان",
+            "ماليزيا"
+        ],
+        "answer_en": "Japan",
+        "answer_ar": "اليابان",
+        "category": "circuits"
+    },
+    {
+        "id": 17,
+        "question_en": "How many times did Michael Schumacher win the F1 World Championship?",
+        "question_ar": "كم مرة فاز مايكل شوماخر ببطولة الفورمولا 1؟",
+        "options_en": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "options_ar": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer_en": "7",
+        "answer_ar": "7",
+        "category": "drivers"
+    },
+    {
+        "id": 18,
+        "question_en": "Which engine supplier powered the dominant Red Bull cars from 2010-2013?",
+        "question_ar": "أي مورد محركات كان يشغّل سيارات ريد بول المهيمنة بين 2010 و2013؟",
+        "options_en": [
+            "Mercedes",
+            "Ferrari",
+            "Renault",
+            "Honda"
+        ],
+        "options_ar": [
+            "مرسيدس",
+            "فيراري",
+            "رينو",
+            "هوندا"
+        ],
+        "answer_en": "Renault",
+        "answer_ar": "رينو",
+        "category": "teams"
+    },
+    {
+        "id": 19,
+        "question_en": "What is the name of the iconic corner at Silverstone where many famous crashes have occurred?",
+        "question_ar": "ما اسم المنعطف الشهير في سيلفرستون حيث وقعت العديد من الحوادث الشهيرة؟",
+        "options_en": [
+            "Maggotts",
+            "Copse",
+            "Stowe",
+            "Club"
+        ],
+        "options_ar": [
+            "ماغوتس",
+            "كوبس",
+            "ستو",
+            "كلوب"
+        ],
+        "answer_en": "Copse",
+        "answer_ar": "كوبس",
+        "category": "circuits"
+    },
+    {
+        "id": 20,
+        "question_en": "Which F1 team is based in Woking, England?",
+        "question_ar": "أي فريق فورمولا 1 مقره في ووكينج بإنجلترا؟",
+        "options_en": [
+            "Williams",
+            "Red Bull",
+            "McLaren",
+            "Aston Martin"
+        ],
+        "options_ar": [
+            "ويليامز",
+            "ريد بول",
+            "ماكلارين",
+            "أستون مارتن"
+        ],
+        "answer_en": "McLaren",
+        "answer_ar": "ماكلارين",
+        "category": "teams"
+    },
+    {
+        "id": 21,
+        "question_en": "What is the minimum weight of an F1 car (including driver) as of recent regulations?",
+        "question_ar": "ما هو الحد الأدنى لوزن سيارة الفورمولا 1 (بما في ذلك السائق) وفق اللوائح الحديثة؟",
+        "options_en": [
+            "700 kg",
+            "768 kg",
+            "800 kg",
+            "650 kg"
+        ],
+        "options_ar": [
+            "700 كجم",
+            "768 كجم",
+            "800 كجم",
+            "650 كجم"
+        ],
+        "answer_en": "768 kg",
+        "answer_ar": "768 كجم",
+        "category": "rules"
+    },
+    {
+        "id": 22,
+        "question_en": "Who was Sebastian Vettel's team at Red Bull when he won four consecutive titles (2010-2013)?",
+        "question_ar": "ما هو الفريق الذي كان فيه سيباستيان فيتيل في ريد بول عندما فاز بأربعة ألقاب متتالية (2010-2013)؟",
+        "options_en": [
+            "Red Bull Racing",
+            "Toro Rosso",
+            "Ferrari",
+            "Renault"
+        ],
+        "options_ar": [
+            "ريد بول ريسينج",
+            "تورو روسو",
+            "فيراري",
+            "رينو"
+        ],
+        "answer_en": "Red Bull Racing",
+        "answer_ar": "ريد بول ريسينج",
+        "category": "teams"
+    },
+    {
+        "id": 23,
+        "question_en": "Which Grand Prix is held on a street circuit in a Middle Eastern country?",
+        "question_ar": "أي جائزة كبرى تُقام على حلبة شوارع في دولة شرق أوسطية؟",
+        "options_en": [
+            "Bahrain GP",
+            "Abu Dhabi GP",
+            "Saudi Arabian GP",
+            "All of these"
+        ],
+        "options_ar": [
+            "جائزة البحرين الكبرى",
+            "جائزة أبوظبي الكبرى",
+            "جائزة السعودية الكبرى",
+            "كل ما سبق"
+        ],
+        "answer_en": "Saudi Arabian GP",
+        "answer_ar": "جائزة السعودية الكبرى",
+        "category": "circuits"
+    },
+    {
+        "id": 24,
+        "question_en": "What is the name of the F1 safety car manufacturer since 1996?",
+        "question_ar": "ما اسم الشركة المصنّعة لسيارة الأمان في الفورمولا 1 منذ 1996؟",
+        "options_en": [
+            "BMW",
+            "Audi",
+            "Mercedes-Benz",
+            "Porsche"
+        ],
+        "options_ar": [
+            "بي إم دبليو",
+            "أودي",
+            "مرسيدس-بنز",
+            "بورشه"
+        ],
+        "answer_en": "Mercedes-Benz",
+        "answer_ar": "مرسيدس-بنز",
+        "category": "rules"
+    },
+    {
+        "id": 25,
+        "question_en": "Which driver is nicknamed 'The Iceman'?",
+        "question_ar": "أي سائق يُلقب بـ 'الرجل الجليدي'؟",
+        "options_en": [
+            "Valtteri Bottas",
+            "Kimi Räikkönen",
+            "Nico Rosberg",
+            "Jenson Button"
+        ],
+        "options_ar": [
+            "فالتيري بوتاس",
+            "كيمي رايكونن",
+            "نيكو روسبرغ",
+            "جينسون باتون"
+        ],
+        "answer_en": "Kimi Räikkönen",
+        "answer_ar": "كيمي رايكونن",
+        "category": "drivers"
+    },
+    {
+        "id": 26,
+        "question_en": "How many laps is the Monaco Grand Prix typically run?",
+        "question_ar": "كم عدد الدورات التي يُجرى عليها جائزة موناكو الكبرى عادةً؟",
+        "options_en": [
+            "50",
+            "78",
+            "60",
+            "56"
+        ],
+        "options_ar": [
+            "50",
+            "78",
+            "60",
+            "56"
+        ],
+        "answer_en": "78",
+        "answer_ar": "78",
+        "category": "circuits"
+    },
+    {
+        "id": 27,
+        "question_en": "What does the red flag mean in Formula 1?",
+        "question_ar": "ماذا يعني العلم الأحمر في الفورمولا 1؟",
+        "options_en": [
+            "Pit stop required",
+            "Race suspended",
+            "Safety Car deployed",
+            "Penalty for driver"
+        ],
+        "options_ar": [
+            "توقف في الحفرة مطلوب",
+            "السباق موقوف",
+            "نشر سيارة الأمان",
+            "عقوبة على السائق"
+        ],
+        "answer_en": "Race suspended",
+        "answer_ar": "السباق موقوف",
+        "category": "rules"
+    },
+    {
+        "id": 28,
+        "question_en": "Which team did Nico Rosberg race for when he won the 2016 F1 Championship?",
+        "question_ar": "مع أي فريق سبق نيكو روسبرغ عندما فاز ببطولة الفورمولا 1 لعام 2016؟",
+        "options_en": [
+            "Red Bull",
+            "Ferrari",
+            "Mercedes",
+            "Williams"
+        ],
+        "options_ar": [
+            "ريد بول",
+            "فيراري",
+            "مرسيدس",
+            "ويليامز"
+        ],
+        "answer_en": "Mercedes",
+        "answer_ar": "مرسيدس",
+        "category": "drivers"
+    },
+    {
+        "id": 29,
+        "question_en": "Which F1 circuit is the longest on the calendar?",
+        "question_ar": "أي حلبة فورمولا 1 هي الأطول في الروزنامة؟",
+        "options_en": [
+            "Spa-Francorchamps",
+            "Suzuka",
+            "Circuit de la Sarthe",
+            "Bahrain International Circuit"
+        ],
+        "options_ar": [
+            "سبا-فرانكورشان",
+            "سوزوكا",
+            "حلبة لا سارث",
+            "حلبة البحرين الدولية"
+        ],
+        "answer_en": "Spa-Francorchamps",
+        "answer_ar": "سبا-فرانكورشان",
+        "category": "circuits"
+    },
+    {
+        "id": 30,
+        "question_en": "What is the term for the fastest lap bonus point in F1?",
+        "question_ar": "ما هو المصطلح لنقطة الدورة الأسرع في الفورمولا 1؟",
+        "options_en": [
+            "Speed Point",
+            "Fastest Lap Point",
+            "Bonus Lap",
+            "Pole Point"
+        ],
+        "options_ar": [
+            "نقطة السرعة",
+            "نقطة أسرع دورة",
+            "دورة مكافأة",
+            "نقطة البول"
+        ],
+        "answer_en": "Fastest Lap Point",
+        "answer_ar": "نقطة أسرع دورة",
+        "category": "rules"
+    }
+]
