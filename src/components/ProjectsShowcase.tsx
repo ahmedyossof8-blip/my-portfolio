@@ -95,8 +95,7 @@ export const ProjectsShowcase: React.FC = () => {
 
                 {/* Project Links */}
                 <div className="flex items-center gap-4 pt-3">
-                  <button className="glass-button text-xs tracking-wider cursor-default opacity-80">
-                    <GitBranch className="w-4 h-4 text-purple-300" />
+
                     <a
                     href="sat-ig-website.vercel.app/"
                     target="_blank"
