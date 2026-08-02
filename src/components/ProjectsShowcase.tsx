@@ -97,7 +97,15 @@ export const ProjectsShowcase: React.FC = () => {
                 <div className="flex items-center gap-4 pt-3">
                   <button className="glass-button text-xs tracking-wider cursor-default opacity-80">
                     <GitBranch className="w-4 h-4 text-purple-300" />
-                    <span>Private Repository</span>
+                    <a
+                    href="sat-ig-website.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="glass-button glass-button-primary text-xs tracking-wider inline-flex items-center gap-2"
+                  >
+                    <span>Launch Live Demo</span>
+                    <ExternalLink className="w-4 h-4 text-cyan-300" />
+                  </a>
                   </button>
                 </div>
               </div>
