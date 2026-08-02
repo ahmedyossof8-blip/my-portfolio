@@ -50,7 +50,7 @@ export const ProjectsShowcase: React.FC = () => {
                   <div className="absolute inset-0 backdrop-blur-md bg-slate-950/40 z-10 pointer-events-none group-hover:backdrop-blur-none transition-all duration-500" />
                   
                   <img
-                    src="public/assets/Screenshot From 2026-08-02 06-22-45.png"
+                    src="assets/Screenshot From 2026-08-02 06-22-45.png"
                     alt="E-commerce Bookstore Administration & Storefront"
                     className="w-full h-[260px] sm:h-[340px] object-cover transform transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
@@ -176,7 +176,7 @@ export const ProjectsShowcase: React.FC = () => {
                   <div className="absolute inset-0 backdrop-blur-md bg-slate-950/40 z-10 pointer-events-none group-hover:backdrop-blur-none transition-all duration-500" />
 
                   <img
-                    src="public/assets/Screenshot From 2026-08-02 07-49-26.png"
+                    src="assets/Screenshot From 2026-08-02 07-49-26.png"
                     alt="Interactive Web Quiz Game"
                     className="w-full h-[260px] sm:h-[340px] object-cover transform transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
