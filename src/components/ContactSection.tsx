@@ -58,7 +58,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-3">
             <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
-            <span>DYNAMIC UPDATE LIQUID-GLASS SLAB</span>
+            <span>DYNAMIC REFRACTING GLASS PANEL</span>
           </div>
           
           {/* EXACT REQUIRED TEXT ABOVE THE FORM */}
@@ -159,7 +159,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         <div className="mt-16 text-center text-xs text-slate-500 font-mono">
           <p>© 2026 AHMED YOUSSEF. ALL RIGHTS RESERVED.</p>
           <p className="mt-1 text-slate-600">
-            Powered by <span className="text-cyan-400 font-semibold">@ybouane/liquidglass</span> WebGL Shader Pipeline.
+            Powered by WebGL Shader Pipeline & Liquid-Glass Physics.
           </p>
         </div>
 

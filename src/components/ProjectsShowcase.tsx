@@ -19,7 +19,7 @@ export const ProjectsShowcase: React.FC = () => {
             Featured Projects & Engineering Work
           </h2>
           <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Engineered with modern architecture, clean code practices, and scalable backend services. Rendered in segmented <code className="text-cyan-400 font-mono">@ybouane/liquidglass</code> panels with depth-based background blur.
+            Engineered with modern architecture, clean code practices, and scalable backend services. Rendered in segmented liquid-glass panels with depth-based background blur.
           </p>
         </div>
 
@@ -58,11 +58,6 @@ export const ProjectsShowcase: React.FC = () => {
                     }}
                   />
 
-                  {/* Overlaid Badge */}
-                  <div className="absolute top-4 left-4 z-20 px-3 py-1 rounded-full bg-slate-950/80 border border-cyan-400/40 text-cyan-300 font-mono text-xs flex items-center gap-1.5 shadow-lg">
-                    <Sparkles className="w-3 h-3 text-cyan-400" />
-                    <span>FULL-STACK ARCHITECTURE</span>
-                  </div>
                 </div>
               </div>
 
@@ -189,11 +184,6 @@ export const ProjectsShowcase: React.FC = () => {
                     }}
                   />
 
-                  {/* Overlaid Badge */}
-                  <div className="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-slate-950/80 border border-purple-400/40 text-purple-300 font-mono text-xs flex items-center gap-1.5 shadow-lg">
-                    <Sparkles className="w-3 h-3 text-purple-400" />
-                    <span>LIVE DEMO AVAILABLE</span>
-                  </div>
                 </div>
               </div>
 

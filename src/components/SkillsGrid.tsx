@@ -86,7 +86,7 @@ export const SkillsGrid: React.FC = () => {
             Core Technical Arsenal
           </h2>
           <p className="mt-3 text-slate-300 text-sm sm:text-base leading-relaxed">
-            Drag any two nodes to overlap them! The <code className="text-cyan-400 font-mono">@ybouane/liquidglass</code> multi-pass rendering engine computes stacked glass distortions, real-time light bending, and dynamic chromatic aberration.
+            Drag any two nodes to overlap them! The liquid-glass multi-pass rendering engine computes stacked glass distortions, real-time light bending, and dynamic chromatic aberration.
           </p>
         </div>
 

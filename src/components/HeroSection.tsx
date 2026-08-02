@@ -17,16 +17,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="glow-backdrop w-[450px] h-[450px] bg-purple-600/25 bottom-10 right-0" />
 
       <div className="relative z-10 max-w-5xl w-full mx-auto">
-        {/* Layer 1: Background Content (Layered behind the floating Liquid Glass Slab so it gets refracted!) */}
+        {/* Layer 1: Background Content */}
         <div className="relative mb-6 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-4 tracking-wider shadow-lg">
             <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
-            <span>@ybouane/liquidglass ENGINE INITIALIZED</span>
+            <span>FULL-STACK ARCHITECTURE & SYSTEMS</span>
           </div>
         </div>
 
-        {/* Hero Panel (The Liquid Glass Masterpiece) */}
-        {/* Configured with dataset attributes for @ybouane/liquidglass */}
+        {/* Hero Panel */}
         <div
           className="liquid-glass-element glass-panel p-6 sm:p-10 md:p-12 relative overflow-hidden backdrop-blur-xl border border-white/20 shadow-2xl transition-shadow duration-300"
           data-config='{"floating": true, "blurAmount": 0.65, "refraction": 1.4, "chromAberration": 0.85, "fresnel": 0.9, "specular": 0.95, "edgeHighlight": 0.9, "shadowOpacity": 0.6}'
@@ -34,7 +33,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {/* Drag Indicator Badge */}
           <div className="absolute top-4 right-4 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900/60 border border-white/10 text-[11px] font-mono text-cyan-300 pointer-events-none select-none z-20">
             <Move className="w-3 h-3 text-cyan-400" />
-            <span>DRAGGABLE GLASS SLAB</span>
+            <span>INTERACTIVE GLASS SLAB</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">

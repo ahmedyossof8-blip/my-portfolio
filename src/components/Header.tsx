@@ -39,7 +39,7 @@ export const Header: React.FC = () => {
 
         {/* Quick Nav Links */}
         <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold text-slate-400 tracking-wider">
-          <a href="#hero" className="hover:text-cyan-400 transition-colors">HERO</a>
+          <a href="#hero" className="hover:text-cyan-400 transition-colors">HOME</a>
           <a href="#skills" className="hover:text-cyan-400 transition-colors">SKILLS</a>
           <a href="#projects" className="hover:text-cyan-400 transition-colors">PROJECTS</a>
           <a href="#contact" className="hover:text-cyan-400 transition-colors">CONTACT</a>
