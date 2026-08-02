@@ -96,7 +96,7 @@ export const ProjectsShowcase: React.FC = () => {
                 {/* Project Links */}
                 <div className="flex items-center gap-4 pt-3">
                   <a
-                    href="sat-ig-website.vercel.app/"
+                    href="sat-ig-website.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="glass-button glass-button-primary text-xs tracking-wider inline-flex items-center gap-2"
