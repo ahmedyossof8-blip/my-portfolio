@@ -54,7 +54,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 */}
                 <div className="image-placeholder-container relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center bg-slate-900/90 border border-cyan-400/30">
                   <img
-                    src="/assets/profile-placeholder.png"
+                    src="/assets/1785639772159.png"
                     alt="Ahmed Youssef - Software Engineer"
                     className="w-full h-full object-cover object-top transform transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
