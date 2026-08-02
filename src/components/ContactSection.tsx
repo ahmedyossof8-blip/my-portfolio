@@ -158,9 +158,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         {/* Footer info */}
         <div className="mt-16 text-center text-xs text-slate-500 font-mono">
           <p>© 2026 AHMED YOUSSEF. ALL RIGHTS RESERVED.</p>
-          <p className="mt-1 text-slate-600">
-            Powered by WebGL Shader Pipeline & Liquid-Glass Physics.
-          </p>
         </div>
 
       </div>
