@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #070913;
+    --accent-cyan: #00f2fe;
+    --accent-purple: #9d4edd;
+    --accent-pink: #f72585;
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-bg: rgba(13, 17, 34, 0.45);
+  }
+
+  body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-dark);
+    color: #f8fafc;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-tech {
+    font-family: 'Space Grotesk', 'Outfit', sans-serif;
+  }
+}
+
+/* Custom Glassmorphism CSS Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+  border-radius: 1.5rem;
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(0, 242, 254, 0.15),
+              inset 0 1px 2px 0 rgba(255, 255, 255, 0.35);
+}
+
+.glass-button {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.glass-button:hover::before {
+  left: 100%;
+}
+
+.glass-button:hover {
+  border-color: rgba(0, 242, 254, 0.8);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+  transform: translateY(-2px);
+}
+
+.glass-button-primary {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.25), rgba(157, 78, 221, 0.25));
+  border-color: rgba(0, 242, 254, 0.5);
+}
+
+.glass-button-primary:hover {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.4), rgba(157, 78, 221, 0.4));
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.6);
+}
+
+/* Pulsing Backlight Effect */
+.glow-backdrop {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  animation: pulseGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.15) translate(20px, -20px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(0.95) translate(-10px, 15px);
+    opacity: 0.5;
+  }
+}
+
+/* Chromatic aberration hover effect for skill nodes */
+.chromatic-node {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.chromatic-node:hover {
+  text-shadow: -2px 0 2px rgba(255, 0, 80, 0.8), 2px 0 2px rgba(0, 242, 254, 0.8);
+  filter: drop-shadow(0 0 15px rgba(157, 78, 221, 0.5));
+}
+
+/* Liquid glass canvas positioning */
+.liquid-glass-element {
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.liquid-glass-element:active {
+  cursor: grabbing;
+}
+
+/* Image container placeholders */
+.image-placeholder-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px dashed rgba(0, 242, 254, 0.3);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease;
+}
+
+.image-placeholder-container:hover {
+  border-color: rgba(0, 242, 254, 0.7);
+}
+
+/* Dynamic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070913;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 254, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 254, 0.6);
+}
