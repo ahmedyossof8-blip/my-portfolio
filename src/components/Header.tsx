@@ -38,11 +38,11 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Quick Nav Links */}
-        <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold text-slate-400 tracking-wider">
-          <a href="#hero" className="hover:text-cyan-400 transition-colors">HOME</a>
-          <a href="#skills" className="hover:text-cyan-400 transition-colors">SKILLS</a>
-          <a href="#projects" className="hover:text-cyan-400 transition-colors">PROJECTS</a>
-          <a href="#contact" className="hover:text-cyan-400 transition-colors">CONTACT</a>
+        <nav className="hidden lg:flex items-center gap-2 font-semibold tracking-wider">
+          <a href="#hero" className="glass-button glass-button-nav liquid-glass-element">HOME</a>
+          <a href="#skills" className="glass-button glass-button-nav liquid-glass-element">SKILLS</a>
+          <a href="#projects" className="glass-button glass-button-nav liquid-glass-element">PROJECTS</a>
+          <a href="#contact" className="glass-button glass-button-nav liquid-glass-element">CONTACT</a>
         </nav>
       </div>
     </header>

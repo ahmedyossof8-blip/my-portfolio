@@ -141,10 +141,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               <div className="pt-2 flex justify-end">
                 <button
                   type="submit"
-                  className="glass-button glass-button-primary text-sm font-semibold tracking-wider group transition-transform duration-300 hover:scale-105 active:scale-95"
-                  style={{
-                    // Chromatic aberration hover distortion boost
-                  }}
+                  className="glass-button glass-button-primary liquid-glass-element text-sm font-semibold tracking-wider group active:scale-95 transition-transform"
                 >
                   <span className="group-hover:text-cyan-200 transition-colors">Submit</span>
                   <Send className="w-4 h-4 text-cyan-300 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />

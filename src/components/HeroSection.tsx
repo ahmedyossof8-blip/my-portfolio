@@ -100,7 +100,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
                 <button
                   onClick={onExploreClick}
-                  className="glass-button glass-button-primary text-sm tracking-wide"
+                  className="glass-button glass-button-primary liquid-glass-element text-sm tracking-wide active:scale-95 transition-transform"
                 >
                   <span>Explore Projects</span>
                   <ArrowRight className="w-4 h-4 text-cyan-300" />
@@ -108,7 +108,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
                 <button
                   onClick={onContactClick}
-                  className="glass-button text-sm tracking-wide"
+                  className="glass-button liquid-glass-element text-sm tracking-wide active:scale-95 transition-transform"
                 >
                   <Mail className="w-4 h-4 text-purple-300" />
                   <span>Get in Touch</span>

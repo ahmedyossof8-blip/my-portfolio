@@ -25,7 +25,9 @@
   }
 }
 
-/* Custom Glassmorphism CSS Utilities */
+/* Custom Glassmorphism CSS Utilities & Touch Fixes */
+
+/* Mobile Touch & Scroll Fixes */
 .glass-panel {
   background: var(--glass-bg);
   backdrop-filter: blur(16px) saturate(180%);
@@ -36,6 +38,7 @@
   border-radius: 1.5rem;
   position: relative;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  touch-action: pan-y; /* Pass vertical swiping to window scroll */
 }
 
 .glass-panel:hover {
@@ -44,21 +47,31 @@
               inset 0 1px 2px 0 rgba(255, 255, 255, 0.35);
 }
 
+/* Universal Liquid Glass Button Styling */
 .glass-button {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 9999px;
   color: #ffffff;
   font-weight: 600;
   padding: 0.75rem 1.75rem;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  touch-action: pan-y;
+  pointer-events: auto;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25),
+              inset 0 1px 1px rgba(255, 255, 255, 0.35);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .glass-button::before {
@@ -68,8 +81,9 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
   transition: left 0.5s ease;
+  pointer-events: none;
 }
 
 .glass-button:hover::before {
@@ -78,18 +92,47 @@
 
 .glass-button:hover {
   border-color: rgba(0, 242, 254, 0.8);
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.45),
+              inset 0 1px 2px rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.glass-button:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.6),
+              inset 0 1px 1px rgba(255, 255, 255, 0.4);
 }
 
 .glass-button-primary {
-  background: linear-gradient(135deg, rgba(0, 242, 254, 0.25), rgba(157, 78, 221, 0.25));
-  border-color: rgba(0, 242, 254, 0.5);
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.28), rgba(157, 78, 221, 0.28));
+  border-color: rgba(0, 242, 254, 0.6);
+  box-shadow: 0 4px 25px rgba(0, 242, 254, 0.25),
+              inset 0 1px 1.5px rgba(255, 255, 255, 0.45);
 }
 
 .glass-button-primary:hover {
-  background: linear-gradient(135deg, rgba(0, 242, 254, 0.4), rgba(157, 78, 221, 0.4));
-  box-shadow: 0 0 30px rgba(0, 242, 254, 0.6);
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.45), rgba(157, 78, 221, 0.45));
+  border-color: rgba(0, 242, 254, 0.9);
+  box-shadow: 0 0 35px rgba(0, 242, 254, 0.65),
+              inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Glass nav link button variant */
+.glass-button-nav {
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  color: #cbd5e1;
+}
+
+.glass-button-nav:hover {
+  color: #00f2fe;
+  border-color: rgba(0, 242, 254, 0.6);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
 }
 
 /* Pulsing Backlight Effect */
@@ -121,6 +164,7 @@
 /* Chromatic aberration hover effect for skill nodes */
 .chromatic-node {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  touch-action: pan-y;
 }
 
 .chromatic-node:hover {
@@ -128,30 +172,31 @@
   filter: drop-shadow(0 0 15px rgba(157, 78, 221, 0.5));
 }
 
-/* Liquid glass canvas positioning */
+/* Liquid glass canvas positioning & touch behavior */
 .liquid-glass-element {
-  touch-action: none;
+  touch-action: pan-y; /* Pass vertical scrolling on touch devices smoothly */
   user-select: none;
-  cursor: grab;
 }
 
-.liquid-glass-element:active {
-  cursor: grabbing;
-}
-
-/* Image container placeholders */
+/* Pure CSS Mobile-Friendly Glass Image Card */
 .image-placeholder-container {
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  border: 1px dashed rgba(0, 242, 254, 0.3);
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(8px);
-  transition: border-color 0.3s ease;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  background: rgba(13, 17, 34, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4),
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  touch-action: pan-y;
 }
 
 .image-placeholder-container:hover {
-  border-color: rgba(0, 242, 254, 0.7);
+  border-color: rgba(0, 242, 254, 0.8);
+  box-shadow: 0 12px 40px 0 rgba(0, 242, 254, 0.25),
+              inset 0 1px 2px 0 rgba(255, 255, 255, 0.4);
 }
 
 .image-placeholder-container img {
@@ -159,7 +204,40 @@
   object-position: top center;
   width: 100%;
   height: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
+.image-placeholder-container:hover img {
+  transform: scale(1.03);
+}
+
+/* Ambient Refraction Glow Line on Image Cards */
+.image-placeholder-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 40%, transparent 60%, rgba(0, 242, 254, 0.15) 100%);
+  transition: opacity 0.3s ease;
+}
+
+/* Dynamic scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070913;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 254, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 254, 0.6);
+}
+
 
 /* Dynamic scrollbar */
 ::-webkit-scrollbar {

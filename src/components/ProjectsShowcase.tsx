@@ -45,19 +45,15 @@ export const ProjectsShowcase: React.FC = () => {
                   CSS Class: image-placeholder-container project-image-slot
                   ========================================================================
                 */}
-                <div className="image-placeholder-container project-image-slot relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 group">
-                  {/* Dynamic blur backdrop layer */}
-                  <div className="absolute inset-0 backdrop-blur-md bg-slate-950/40 z-10 pointer-events-none group-hover:backdrop-blur-none transition-all duration-500" />
-                  
+                <div className="image-placeholder-container project-image-slot relative rounded-2xl overflow-hidden shadow-2xl group border border-cyan-400/30">
                   <img
                     src="assets/Screenshot From 2026-08-02 06-22-45.png"
                     alt="E-commerce Bookstore Administration & Storefront"
-                    className="w-full h-[260px] sm:h-[340px] object-cover transform transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[260px] sm:h-[340px] object-cover object-top"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80';
                     }}
                   />
-
                 </div>
               </div>
 
@@ -99,7 +95,7 @@ export const ProjectsShowcase: React.FC = () => {
                     href="https://sat-ig-website.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="glass-button glass-button-primary text-xs tracking-wider inline-flex items-center gap-2"
+                    className="glass-button glass-button-primary liquid-glass-element text-xs tracking-wider inline-flex items-center gap-2 active:scale-95 transition-transform"
                   >
                     <span>Launch Live Demo</span>
                     <ExternalLink className="w-4 h-4 text-cyan-300" />
@@ -158,7 +154,7 @@ export const ProjectsShowcase: React.FC = () => {
                     href="https://game-quiz-wine.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="glass-button glass-button-primary text-xs tracking-wider inline-flex items-center gap-2"
+                    className="glass-button glass-button-primary liquid-glass-element text-xs tracking-wider inline-flex items-center gap-2 active:scale-95 transition-transform"
                   >
                     <span>Launch Live Demo</span>
                     <ExternalLink className="w-4 h-4 text-cyan-300" />
@@ -167,28 +163,16 @@ export const ProjectsShowcase: React.FC = () => {
               </div>
 
               {/* IMAGE PLACEHOLDER CONTAINER: /assets/project-quiz-placeholder.png */}
-              {/* Has dynamic blur applied to background based on depth relative to glass overlay */}
               <div className="lg:col-span-7 order-1 lg:order-2">
-                {/* 
-                  ========================================================================
-                  PROJECT 2 IMAGE CONTAINER SLOT
-                  File path: /assets/project-quiz-placeholder.png
-                  CSS Class: image-placeholder-container project-image-slot
-                  ========================================================================
-                */}
-                <div className="image-placeholder-container project-image-slot relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 group">
-                  {/* Dynamic blur backdrop layer */}
-                  <div className="absolute inset-0 backdrop-blur-md bg-slate-950/40 z-10 pointer-events-none group-hover:backdrop-blur-none transition-all duration-500" />
-
+                <div className="image-placeholder-container project-image-slot relative rounded-2xl overflow-hidden shadow-2xl group border border-purple-400/30">
                   <img
                     src="assets/Screenshot From 2026-08-02 07-49-26.png"
                     alt="Interactive Web Quiz Game"
-                    className="w-full h-[260px] sm:h-[340px] object-cover transform transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-[260px] sm:h-[340px] object-cover object-top"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=1200&q=80';
                     }}
                   />
-
                 </div>
               </div>
 
