@@ -73,7 +73,6 @@ const translations = {
     'disciplines.d4.desc': 'High-performance interactive web interfaces, fluid motion physics, zero-CLS layouts, clean client-side state management, and accessibility standards.',
 
     // Contact Terminal Footer
-    'footer.status': 'SYS_STATUS: OPERATIONAL',
     'footer.contactHeading': 'Dispatch System Contact',
     'footer.contactBio': 'Available for high-impact backend architecture, database engineering, API automation, and modern web products.',
     'footer.copyBtn': 'COPY EMAIL',

@@ -40,7 +40,7 @@ export default function TerminalFooter() {
 
             <div className="flex items-center gap-2 text-xs font-mono text-ash-gray">
               <ShieldCheck className="w-4 h-4 text-electric-iris" />
-              <span>SSL_ENCRYPTED_DISPATCH</span>
+              <span></span>
             </div>
           </div>
 
