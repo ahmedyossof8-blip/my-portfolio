@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ProjectBento from '@/components/ProjectBento';
 import TechMatrix from '@/components/TechMatrix';
-import TerminalFooter from '@/components/TerminalFooter';
 import MobileNav from '@/components/MobileNav';
 
 export default function Home() {
