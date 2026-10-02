@@ -35,7 +35,7 @@ export default function TerminalFooter() {
           <div className="flex flex-wrap items-center justify-between gap-4 pb-8 mb-8 border-b border-white/[0.07]">
             <div className="flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs tracking-wider">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>{t('footer.status')}</span>
+              
             </div>
 
             <div className="flex items-center gap-2 text-xs font-mono text-ash-gray">
