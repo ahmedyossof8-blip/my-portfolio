@@ -24,7 +24,7 @@ export default function Home() {
       <TechMatrix />
 
       {/* Minimal Contact & Footer */}
-      <TerminalFooter />
+
 
       {/* Ergonomic Floating Bottom Mobile Nav */}
       <MobileNav />
