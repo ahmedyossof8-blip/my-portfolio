@@ -18,14 +18,14 @@ export default function Header() {
   return (
     <header className="fixed top-5 left-0 right-0 z-40 px-4 sm:px-6 pointer-events-none flex justify-center">
       {/* Floating Centered Dala Glass Bar */}
-      <div className="pointer-events-auto max-w-3xl w-full flex items-center justify-between px-5 py-2.5 rounded-full backdrop-blur-xl bg-black/60 border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] transition-all">
+      <div className="pointer-events-auto max-w-3xl w-full flex items-center justify-between px-5 py-2.5 rounded-full backdrop-blur-2xl bg-[#09090b]/80 border border-white/[0.07] shadow-2xl shadow-black/60 transition-all">
         {/* Navigation Links */}
         <nav className="flex items-center gap-1 sm:gap-2">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="px-3.5 py-1.5 rounded-full text-xs font-medium uppercase tracking-[0.025em] text-ash-gray hover:text-bone-white hover:bg-white/[0.06] transition-all"
+              className="px-3.5 py-1.5 rounded-full text-xs font-medium uppercase tracking-[0.025em] text-ash-gray hover:text-bone-white hover:bg-white/[0.04] transition-all"
             >
               {link.name}
             </a>
@@ -37,7 +37,7 @@ export default function Header() {
           {/* Dala Language Toggle Pill */}
           <button
             onClick={toggleLanguage}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.1] hover:border-white/20 text-xs font-mono text-ash-gray hover:text-bone-white transition-all active:scale-95 min-h-[36px]"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.07] hover:border-white/20 text-xs font-mono text-ash-gray hover:text-bone-white transition-all active:scale-95 min-h-[36px]"
             aria-label="Toggle Language"
           >
             <Globe className="w-3.5 h-3.5 text-saffron-spark" />
@@ -58,7 +58,7 @@ export default function Header() {
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="sm:hidden p-2 rounded-full bg-white/[0.06] border border-white/10 text-ash-gray hover:text-bone-white min-w-[36px] min-h-[36px] flex items-center justify-center"
+            className="sm:hidden p-2 rounded-full bg-white/[0.03] border border-white/[0.07] text-ash-gray hover:text-bone-white min-w-[36px] min-h-[36px] flex items-center justify-center"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-4 h-4 text-saffron-spark" /> : <Menu className="w-4 h-4" />}
@@ -74,14 +74,14 @@ export default function Header() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="pointer-events-auto absolute top-16 left-4 right-4 sm:hidden rounded-3xl backdrop-blur-2xl bg-black/95 border border-white/[0.1] p-5 shadow-2xl space-y-2"
+            className="pointer-events-auto absolute top-16 left-4 right-4 sm:hidden rounded-3xl backdrop-blur-2xl bg-[#09090b]/95 border border-white/[0.07] p-5 shadow-2xl space-y-2"
           >
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between px-4 py-3 rounded-2xl bg-white/[0.04] text-sm font-medium text-ash-gray hover:text-bone-white hover:bg-white/[0.08] transition-colors min-h-[44px]"
+                className="flex items-center justify-between px-4 py-3 rounded-2xl bg-white/[0.03] text-sm font-medium text-ash-gray hover:text-bone-white hover:bg-white/[0.06] transition-colors min-h-[44px]"
               >
                 <span>{link.name}</span>
                 <ArrowUpRight className="w-4 h-4 opacity-60" />

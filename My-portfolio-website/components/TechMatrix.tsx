@@ -29,9 +29,9 @@ function DisciplineCard({
     offset: ['start end', 'start 65%', 'end 20%', 'end start'],
   });
 
-  const rawScale = useTransform(scrollYProgress, [0, 0.35, 0.85, 1], [0.90, 1.0, 1.0, 0.95]);
-  const rawOpacity = useTransform(scrollYProgress, [0, 0.35, 0.85, 1], [0.35, 1.0, 1.0, 0.4]);
-  const rawBlurNum = useTransform(scrollYProgress, [0, 0.35, 0.85, 1], [6, 0, 0, 4]);
+  const rawScale = useTransform(scrollYProgress, [0, 0.33, 0.85, 1], [0.90, 1.0, 1.0, 0.95]);
+  const rawOpacity = useTransform(scrollYProgress, [0, 0.33, 0.85, 1], [0.35, 1.0, 1.0, 0.4]);
+  const rawBlurNum = useTransform(scrollYProgress, [0, 0.33, 0.85, 1], [6, 0, 0, 4]);
 
   const springConfig = { stiffness: 240, damping: 25, mass: 0.5 };
   const scale = useSpring(rawScale, springConfig);
@@ -53,17 +53,17 @@ function DisciplineCard({
       }}
       whileHover={{ scale: 1.008 }}
       transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-      className="group relative rounded-3xl backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500 p-8 flex flex-col justify-between overflow-hidden"
+      className="group relative rounded-3xl backdrop-blur-2xl bg-white/[0.02] border border-white/[0.07] shadow-2xl shadow-black/60 hover:bg-white/[0.04] hover:border-white/15 transition-all duration-500 p-8 flex flex-col justify-between overflow-hidden"
     >
       {/* Ambient Diffused Glow */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-electric-iris/5 rounded-full blur-3xl group-hover:bg-electric-iris/10 transition-all duration-500 pointer-events-none" />
 
       <div>
         <div className="flex items-center justify-between mb-6">
-          <div className="w-12 h-12 rounded-2xl bg-white/[0.06] border border-white/10 flex items-center justify-center group-hover:border-electric-iris/40 transition-colors">
+          <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/[0.07] flex items-center justify-center group-hover:border-electric-iris/40 transition-colors">
             <IconComp className="w-6 h-6 text-electric-iris" />
           </div>
-          <span className="text-[10px] font-mono text-ash-gray bg-white/[0.04] px-3 py-1 rounded-full border border-white/10 uppercase tracking-widest">
+          <span className="text-[10px] font-mono text-ash-gray bg-white/[0.03] px-3 py-1 rounded-full border border-white/[0.07] uppercase tracking-widest">
             CORE DOMAIN
           </span>
         </div>
@@ -79,11 +79,11 @@ function DisciplineCard({
       </div>
 
       {/* Highlights */}
-      <div className="flex flex-wrap gap-2 pt-4 border-t border-white/[0.06]">
+      <div className="flex flex-wrap gap-2 pt-4 border-t border-white/[0.07]">
         {discipline.highlights.map((h) => (
           <span
             key={h}
-            className="text-xs font-mono text-silver-mist bg-black/60 px-3 py-1 rounded-lg border border-white/[0.08] group-hover:border-white/20 transition-colors"
+            className="text-xs font-mono text-silver-mist bg-[#09090b]/80 px-3 py-1 rounded-lg border border-white/[0.07] group-hover:border-white/15 transition-colors"
           >
             {h}
           </span>
@@ -122,7 +122,7 @@ export default function TechMatrix() {
       highlights: ['Relational Schema Design', 'Query Tuning & Indexing', 'ACID Compliance', 'CDN Caching'],
     },
     {
-      id: 'workflow-automation',
+      id: 'api-integrations',
       titleKey: 'disciplines.d3.title',
       subtitleKey: 'disciplines.d3.sub',
       descKey: 'disciplines.d3.desc',
@@ -130,7 +130,7 @@ export default function TechMatrix() {
       highlights: ['Automated Background Jobs', 'Webhook Integration', 'CI/CD Pipelines', 'Integration Engines'],
     },
     {
-      id: 'modern-frontend',
+      id: 'modern-web',
       titleKey: 'disciplines.d4.title',
       subtitleKey: 'disciplines.d4.sub',
       descKey: 'disciplines.d4.desc',
@@ -140,11 +140,11 @@ export default function TechMatrix() {
   ];
 
   return (
-    <section ref={sectionRef} id="disciplines" className="py-24 relative bg-black overflow-hidden">
+    <section ref={sectionRef} id="disciplines" className="py-24 relative bg-[#09090b] overflow-hidden">
       {/* Ambient Parallax Orb */}
       <motion.div
         style={{ y: orbY }}
-        className="absolute top-1/2 right-10 w-[550px] h-[550px] mesh-orb-2 pointer-events-none opacity-20"
+        className="absolute top-1/2 right-10 w-[550px] h-[550px] mesh-orb-2 pointer-events-none opacity-15"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        void: '#000000',
+        void: '#09090b',
+        charcoal: '#0c0c0e',
         'bone-white': '#ffffff',
         'ash-gray': '#9a9a9a',
         'silver-mist': '#bdbdbd',
@@ -33,7 +34,7 @@ const config: Config = {
         'nav-label': '0.35px',
       },
       boxShadow: {
-        'dala-glass': '0 8px 32px 0 rgba(0, 0, 0, 0.5)',
+        'dala-glass': '0 20px 50px 0 rgba(0, 0, 0, 0.6)',
         'electric-glow': '0 0 30px rgba(128, 82, 255, 0.35)',
         'saffron-glow': '0 0 25px rgba(255, 184, 41, 0.3)',
       },

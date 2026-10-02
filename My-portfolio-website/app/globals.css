@@ -3,7 +3,8 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --color-void: #000000;
+  --color-void: #09090b;
+  --color-canvas-warm: #0c0c0e;
   --color-bone-white: #ffffff;
   --color-ash-gray: #9a9a9a;
   --color-silver-mist: #bdbdbd;
@@ -14,6 +15,8 @@
 
 body {
   background-color: var(--color-void);
+  background-image: radial-gradient(circle at 50% 0%, rgba(128, 82, 255, 0.04) 0%, rgba(12, 12, 14, 0.8) 50%, rgba(9, 9, 11, 1) 100%);
+  background-attachment: fixed;
   color: var(--color-bone-white);
   font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
@@ -31,13 +34,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 4px;
-  border: 2px solid #000000;
+  border: 2px solid #09090b;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -46,11 +49,11 @@ body {
 
 /* Dala Liquid Glass Utilities */
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.6);
 }
 
 .liquid-glass-hover {
@@ -58,25 +61,25 @@ body {
 }
 
 .liquid-glass-hover:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 25px 60px 0 rgba(0, 0, 0, 0.75);
 }
 
 /* Glass Tactile Button */
 .glass-button {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15), 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.1), 0 4px 20px rgba(0, 0, 0, 0.5);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25), 0 6px 24px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.2), 0 6px 24px rgba(0, 0, 0, 0.6);
 }
 
 /* Primary Electric Iris Action Button */
@@ -96,11 +99,11 @@ body {
 
 /* Ambient Diffused Warm Lighting */
 .mesh-orb-1 {
-  background: radial-gradient(circle, rgba(128, 82, 255, 0.12) 0%, rgba(21, 132, 110, 0.06) 50%, transparent 70%);
-  filter: blur(90px);
+  background: radial-gradient(circle, rgba(128, 82, 255, 0.08) 0%, rgba(21, 132, 110, 0.03) 50%, transparent 70%);
+  filter: blur(100px);
 }
 
 .mesh-orb-2 {
-  background: radial-gradient(circle, rgba(255, 184, 41, 0.08) 0%, rgba(128, 82, 255, 0.05) 50%, transparent 70%);
-  filter: blur(100px);
+  background: radial-gradient(circle, rgba(255, 184, 41, 0.05) 0%, rgba(128, 82, 255, 0.03) 50%, transparent 70%);
+  filter: blur(120px);
 }

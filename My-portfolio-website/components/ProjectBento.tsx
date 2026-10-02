@@ -38,9 +38,9 @@ function ProjectCard({
     offset: ['start end', 'start 65%', 'end 20%', 'end start'],
   });
 
-  const rawScale = useTransform(scrollYProgress, [0, 0.35, 0.85, 1], [0.90, 1.0, 1.0, 0.95]);
-  const rawOpacity = useTransform(scrollYProgress, [0, 0.35, 0.85, 1], [0.35, 1.0, 1.0, 0.4]);
-  const rawBlurNum = useTransform(scrollYProgress, [0, 0.35, 0.85, 1], [6, 0, 0, 4]);
+  const rawScale = useTransform(scrollYProgress, [0, 0.33, 0.85, 1], [0.90, 1.0, 1.0, 0.95]);
+  const rawOpacity = useTransform(scrollYProgress, [0, 0.33, 0.85, 1], [0.35, 1.0, 1.0, 0.4]);
+  const rawBlurNum = useTransform(scrollYProgress, [0, 0.33, 0.85, 1], [6, 0, 0, 4]);
 
   const springConfig = { stiffness: 240, damping: 25, mass: 0.5 };
   const scale = useSpring(rawScale, springConfig);
@@ -63,11 +63,11 @@ function ProjectCard({
       <motion.div
         whileHover={{ scale: 1.008 }}
         transition={{ type: 'spring', stiffness: 300, damping: 24 }}
-        className="group relative rounded-3xl backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] shadow-[0_20px_50px_rgba(0,0,0,0.6)] hover:border-white/20 hover:bg-white/[0.05] transition-all duration-500 p-6 sm:p-10 overflow-hidden"
+        className="group relative rounded-3xl backdrop-blur-2xl bg-white/[0.02] border border-white/[0.07] shadow-2xl shadow-black/60 hover:border-white/15 hover:bg-white/[0.04] transition-all duration-500 p-6 sm:p-10 overflow-hidden"
       >
         {/* Subtle Accent Glow */}
         <div
-          className="absolute -top-20 -right-20 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-15 group-hover:opacity-30 transition-opacity duration-500"
+          className="absolute -top-20 -right-20 w-96 h-96 rounded-full blur-3xl pointer-events-none opacity-10 group-hover:opacity-20 transition-opacity duration-500"
           style={{
             background: 'radial-gradient(circle, #8052ff 0%, transparent 70%)',
           }}
@@ -79,7 +79,7 @@ function ProjectCard({
             <div>
               {/* Category & Status */}
               <div className="flex items-center justify-between gap-3 mb-6">
-                <span className="text-xs font-mono uppercase tracking-[0.025em] px-3.5 py-1 rounded-full bg-white/[0.05] border border-white/10 text-ash-gray">
+                <span className="text-xs font-mono uppercase tracking-[0.025em] px-3.5 py-1 rounded-full bg-white/[0.03] border border-white/[0.07] text-ash-gray">
                   {project.categoryKey}
                 </span>
                 <div className="flex items-center gap-1.5 font-mono text-[11px] text-saffron-spark bg-saffron-spark/10 px-3 py-1 rounded-full border border-saffron-spark/20">
@@ -97,8 +97,13 @@ function ProjectCard({
                 </p>
               </div>
 
+              {/* Summary */}
+              <p className="text-silver-mist text-sm sm:text-base leading-relaxed mb-6 font-light">
+                {t(project.summaryKey)}
+              </p>
+
               {/* Highlights */}
-              <div className="space-y-2.5 my-6 bg-black/60 p-4 sm:p-5 rounded-2xl border border-white/[0.06]">
+              <div className="space-y-2.5 my-6 bg-[#09090b]/80 p-4 sm:p-5 rounded-2xl border border-white/[0.07]">
                 {project.highlightKeys.map((hk, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-silver-mist">
                     <Check className="w-4 h-4 text-saffron-spark shrink-0 mt-0.5" />
@@ -109,7 +114,7 @@ function ProjectCard({
             </div>
 
             {/* Action Buttons */}
-            <div className="flex items-center gap-3 pt-4 border-t border-white/[0.08]">
+            <div className="flex items-center gap-3 pt-4 border-t border-white/[0.07]">
               <a
                 href={project.liveUrl}
                 target="_blank"
@@ -133,7 +138,7 @@ function ProjectCard({
           {/* Metrics & Tech Badges Column */}
           <div className="lg:col-span-4 flex flex-col justify-between h-full space-y-4">
             {/* Metrics */}
-            <div className="grid grid-cols-1 gap-3 p-4 rounded-2xl bg-black/60 border border-white/[0.06]">
+            <div className="grid grid-cols-1 gap-3 p-4 rounded-2xl bg-[#09090b]/80 border border-white/[0.07]">
               {project.metrics.map((m, idx) => (
                 <div key={idx} className="flex items-center justify-between">
                   <span className="text-xs font-mono text-ash-gray">{m.label}</span>
@@ -145,11 +150,11 @@ function ProjectCard({
             </div>
 
             {/* Tech Badges */}
-            <div className="flex flex-wrap gap-1.5 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
+            <div className="flex flex-wrap gap-1.5 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.07]">
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 rounded-lg bg-white/[0.04] border border-white/10 text-xs font-mono text-silver-mist group-hover:border-white/20 transition-colors"
+                  className="px-3 py-1 rounded-lg bg-white/[0.03] border border-white/[0.07] text-xs font-mono text-silver-mist group-hover:border-white/15 transition-colors"
                 >
                   {tech}
                 </span>
@@ -172,7 +177,7 @@ export default function ProjectBento() {
     offset: ['start end', 'end start'],
   });
 
-  const orbY = useTransform(scrollYProgress, [0, 1], [-60, 60]);
+  const orbY = useTransform(scrollYProgress, [0, 1], [-50, 50]);
 
   const projects: Project[] = [
     {
@@ -214,11 +219,11 @@ export default function ProjectBento() {
   ];
 
   return (
-    <section ref={containerRef} id="works" className="py-24 relative bg-black overflow-hidden">
+    <section ref={containerRef} id="works" className="py-24 relative bg-[#09090b] overflow-hidden">
       {/* Background Parallax Light Orb */}
       <motion.div
         style={{ y: orbY }}
-        className="absolute top-1/3 left-10 w-[600px] h-[600px] mesh-orb-1 pointer-events-none opacity-20"
+        className="absolute top-1/3 left-10 w-[600px] h-[600px] mesh-orb-1 pointer-events-none opacity-15"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -267,7 +272,7 @@ export default function ProjectBento() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedProject(null)}
-              className="absolute inset-0 bg-black/90 backdrop-blur-xl"
+              className="absolute inset-0 bg-[#09090b]/90 backdrop-blur-2xl"
             />
 
             {/* Modal Content */}
@@ -276,12 +281,12 @@ export default function ProjectBento() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
-              className="relative z-10 w-full max-w-2xl backdrop-blur-2xl bg-black/95 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
+              className="relative z-10 w-full max-w-2xl backdrop-blur-2xl bg-[#09090b]/95 border border-white/[0.07] rounded-3xl p-6 sm:p-8 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
             >
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-5 right-5 p-2 rounded-full bg-white/[0.08] text-ash-gray hover:text-bone-white hover:bg-white/15 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+                className="absolute top-5 right-5 p-2 rounded-full bg-white/[0.04] text-ash-gray hover:text-bone-white hover:bg-white/10 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -302,7 +307,7 @@ export default function ProjectBento() {
                 <h4 className="text-xs font-mono text-ash-gray uppercase tracking-wider mb-3">
                   Architecture Highlights
                 </h4>
-                <div className="space-y-2 bg-black/60 p-4 rounded-2xl border border-white/[0.08]">
+                <div className="space-y-2 bg-[#09090b] p-4 rounded-2xl border border-white/[0.07]">
                   {selectedProject.highlightKeys.map((hk, i) => (
                     <div key={i} className="flex items-start gap-2.5 text-xs text-silver-mist">
                       <Check className="w-4 h-4 text-saffron-spark shrink-0 mt-0.5" />
@@ -321,7 +326,7 @@ export default function ProjectBento() {
                   {selectedProject.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1.5 rounded-lg bg-white/[0.06] border border-white/10 text-xs font-mono text-bone-white"
+                      className="px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.07] text-xs font-mono text-bone-white"
                     >
                       {tech}
                     </span>
@@ -330,7 +335,7 @@ export default function ProjectBento() {
               </div>
 
               {/* Actions */}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+              <div className="flex items-center gap-3 pt-4 border-t border-white/[0.07]">
                 <a
                   href={selectedProject.liveUrl}
                   target="_blank"

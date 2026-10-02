@@ -9,7 +9,7 @@ export default function MobileNav() {
 
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 md:hidden w-[92%] max-w-sm">
-      <nav className="flex items-center justify-around px-3 py-2 bg-black/85 border border-white/[0.1] rounded-full backdrop-blur-xl shadow-2xl shadow-black/90">
+      <nav className="flex items-center justify-around px-3 py-2 bg-[#09090b]/90 border border-white/[0.07] rounded-full backdrop-blur-2xl shadow-2xl shadow-black/90">
         <a
           href="#works"
           className="flex flex-col items-center justify-center p-2 rounded-full text-ash-gray hover:text-electric-iris min-w-[44px] min-h-[44px] transition-colors"
@@ -37,11 +37,11 @@ export default function MobileNav() {
           <span className="text-[9px] font-mono mt-0.5">Contact</span>
         </a>
 
-        <div className="h-6 w-[1px] bg-white/10 mx-0.5" />
+        <div className="h-6 w-[1px] bg-white/[0.07] mx-0.5" />
 
         <button
           onClick={scrollToTop}
-          className="flex items-center justify-center p-2 rounded-full bg-white/[0.08] border border-white/10 text-saffron-spark min-w-[44px] min-h-[44px] active:scale-90 transition-transform"
+          className="flex items-center justify-center p-2 rounded-full bg-white/[0.04] border border-white/[0.07] text-saffron-spark min-w-[44px] min-h-[44px] active:scale-90 transition-transform"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-4 h-4" />
