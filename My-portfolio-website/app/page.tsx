@@ -8,7 +8,7 @@ import MobileNav from '@/components/MobileNav';
 
 export default function Home() {
   return (
-    <main className="relative bg-[#070709] min-h-screen selection:bg-[#D4FF00]/20 selection:text-[#D4FF00] overflow-x-hidden">
+    <main className="relative bg-black min-h-screen selection:bg-[#8052ff]/25 selection:text-[#8052ff] overflow-x-hidden">
       {/* Global Liquid Glass Scroll Progress Bar */}
       <ScrollProgress />
 

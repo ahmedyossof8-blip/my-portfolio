@@ -22,14 +22,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Ahmed Yossof — Backend & Full-Stack Developer',
-  description: 'High-performance portfolio landing page showcasing backend architectures, high-concurrency e-commerce systems, and full-stack web products built with Next.js, FastAPI, and Supabase.',
-  keywords: ['Backend Developer', 'Full-Stack Developer', 'Software Architect', 'Next.js', 'FastAPI', 'Tailwind CSS', 'TypeScript', 'Portfolio'],
+  title: 'Ahmed Yossof — Systems & Product Engineering',
+  description: 'Showcasing scalable backend architectures, high-performance database systems, workflow automation, and fluid web products.',
+  keywords: ['System Architecture', 'Database Engineering', 'Workflow Automation', 'Next.js', 'FastAPI', 'Tailwind CSS', 'TypeScript', 'Portfolio'],
   authors: [{ name: 'Ahmed Yossof' }],
 };
 
 export const viewport: Viewport = {
-  themeColor: '#070709',
+  themeColor: '#000000',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -42,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`dark scroll-smooth ${inter.variable} ${cairo.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-[#070709] text-zinc-100 antialiased min-h-screen selection:bg-[#D4FF00]/20 selection:text-[#D4FF00]">
+      <body className="bg-black text-bone-white antialiased min-h-screen selection:bg-[#8052ff]/25 selection:text-[#8052ff]">
         <LanguageProvider>
           {children}
         </LanguageProvider>

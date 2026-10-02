@@ -9,10 +9,10 @@ export default function MobileNav() {
 
   return (
     <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 md:hidden w-[92%] max-w-sm">
-      <nav className="flex items-center justify-around px-3 py-2 bg-zinc-950/80 border border-white/10 rounded-full backdrop-blur-xl shadow-2xl shadow-black/80">
+      <nav className="flex items-center justify-around px-3 py-2 bg-black/85 border border-white/[0.1] rounded-full backdrop-blur-xl shadow-2xl shadow-black/90">
         <a
           href="#works"
-          className="flex flex-col items-center justify-center p-2 rounded-full text-zinc-400 hover:text-[#D4FF00] min-w-[44px] min-h-[44px] transition-colors"
+          className="flex flex-col items-center justify-center p-2 rounded-full text-ash-gray hover:text-electric-iris min-w-[44px] min-h-[44px] transition-colors"
           aria-label="Works"
         >
           <Layers className="w-5 h-5" />
@@ -21,7 +21,7 @@ export default function MobileNav() {
 
         <a
           href="#disciplines"
-          className="flex flex-col items-center justify-center p-2 rounded-full text-zinc-400 hover:text-[#D4FF00] min-w-[44px] min-h-[44px] transition-colors"
+          className="flex flex-col items-center justify-center p-2 rounded-full text-ash-gray hover:text-electric-iris min-w-[44px] min-h-[44px] transition-colors"
           aria-label="Disciplines"
         >
           <Cpu className="w-5 h-5" />
@@ -30,7 +30,7 @@ export default function MobileNav() {
 
         <a
           href="#contact"
-          className="flex flex-col items-center justify-center p-2 rounded-full text-zinc-400 hover:text-[#D4FF00] min-w-[44px] min-h-[44px] transition-colors"
+          className="flex flex-col items-center justify-center p-2 rounded-full text-ash-gray hover:text-electric-iris min-w-[44px] min-h-[44px] transition-colors"
           aria-label="Contact"
         >
           <Mail className="w-5 h-5" />
@@ -41,7 +41,7 @@ export default function MobileNav() {
 
         <button
           onClick={scrollToTop}
-          className="flex items-center justify-center p-2 rounded-full bg-white/[0.08] border border-white/10 text-[#D4FF00] min-w-[44px] min-h-[44px] active:scale-90 transition-transform"
+          className="flex items-center justify-center p-2 rounded-full bg-white/[0.08] border border-white/10 text-saffron-spark min-w-[44px] min-h-[44px] active:scale-90 transition-transform"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-4 h-4" />
