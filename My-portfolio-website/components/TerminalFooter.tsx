@@ -31,17 +31,9 @@ export default function TerminalFooter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="rounded-3xl bg-white/[0.02] border border-white/[0.07] p-8 sm:p-12 backdrop-blur-2xl shadow-2xl shadow-black/60 mb-12">
           
-          {/* Status Bar Header */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-8 mb-8 border-b border-white/[0.07]">
-            <div className="flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono text-xs tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              
-            </div>
-
-            <div className="flex items-center gap-2 text-xs font-mono text-ash-gray">
-              <ShieldCheck className="w-4 h-4 text-electric-iris" />
-              <span></span>
-            </div>
+          {/* Header Icon */}
+          <div className="flex items-center justify-end mb-6 text-xs font-mono text-ash-gray">
+            <ShieldCheck className="w-4 h-4 text-electric-iris" />
           </div>
 
           {/* Main Footer Headline & Bio */}
